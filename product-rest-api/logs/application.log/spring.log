@@ -2249,3 +2249,12 @@ Using generated security password: 1a0d3385-70ed-446d-adae-00a37d830b99
 2020-04-12 16:16:57.898  INFO 56766 --- [main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@1436a7ab{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
 2020-04-12 16:16:57.901  INFO 56766 --- [main] o.s.b.web.embedded.jetty.JettyWebServer  : Jetty started on port(s) 8080 (http/1.1) with context path '/productapi'
 2020-04-12 16:16:57.903  INFO 56766 --- [main] e.h.s.ProductRestApiApplication          : Started ProductRestApiApplication in 3.776 seconds (JVM running for 4.222)
+2020-04-12 16:23:32.054  INFO 56766 --- [RMI TCP Connection(17)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-04-12 16:23:32.057  INFO 56766 --- [RMI TCP Connection(17)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-12 16:23:32.057  INFO 56766 --- [RMI TCP Connection(17)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-04-12 16:23:32.059  INFO 56766 --- [RMI TCP Connection(17)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-04-12 16:23:32.062  INFO 56766 --- [RMI TCP Connection(17)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-04-12 16:23:32.068  INFO 56766 --- [RMI TCP Connection(17)-127.0.0.1] o.e.jetty.server.AbstractConnector       : Stopped ServerConnector@1436a7ab{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2020-04-12 16:23:32.069  INFO 56766 --- [RMI TCP Connection(17)-127.0.0.1] org.eclipse.jetty.server.session         : node0 Stopped scavenging
+2020-04-12 16:23:32.071  INFO 56766 --- [RMI TCP Connection(17)-127.0.0.1] o.e.j.s.h.ContextHandler.application     : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2020-04-12 16:23:32.072  INFO 56766 --- [RMI TCP Connection(17)-127.0.0.1] o.e.jetty.server.handler.ContextHandler  : Stopped o.s.b.w.e.j.JettyEmbeddedWebAppContext@64524dd{application,/productapi,[file:///private/var/folders/0_/s2kl_l7j4jbc009y1njt2tym0000gn/T/jetty-docbase.8167881311060183986.8080/],UNAVAILABLE}
