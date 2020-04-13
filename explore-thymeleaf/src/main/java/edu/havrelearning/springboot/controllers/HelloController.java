@@ -14,6 +14,7 @@ public class HelloController {
 		
 	}
 	
+	@RequestMapping(value = "/sendData")
 	public ModelAndView sendData() {
 		
 		ModelAndView modelAndView = new ModelAndView("data");
