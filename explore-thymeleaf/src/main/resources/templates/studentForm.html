@@ -6,7 +6,7 @@
 	</head>
 	<body>
 		<h1>Student Details:</h1>
-		<form th:object="${student}">
+		<form th:object="${student}" th:action="@{/saveStudent}" method="post">
 			<div>Student Name: <input type="text" th:field="*{name}" /></div>
 			<div>Student Score: <input type="text" th:field="*{score}" /></div>
 			<div><input type="submit" value="Save" /></div>

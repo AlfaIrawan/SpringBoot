@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -77,5 +78,16 @@ public class HelloController {
 		return modelAndView;
 		
 	}
+	
+	@RequestMapping(value = "/saveStudent")
+	public ModelAndView saveStudent(@ModelAttribute Student model) {
+		
+		ModelAndView modelAndView = new ModelAndView("result");
+		System.out.println(model.getName());
+		System.out.println(model.getScore());
+		return modelAndView;
+		
+	}
+	
 
 }
