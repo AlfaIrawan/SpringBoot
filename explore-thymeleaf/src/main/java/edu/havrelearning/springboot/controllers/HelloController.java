@@ -63,5 +63,19 @@ public class HelloController {
 		return modelAndView;
 		
 	}
+	
+	@RequestMapping(value = "/studentForm")
+	public ModelAndView displayStudentForm() {
+		
+		ModelAndView modelAndView = new ModelAndView("studentForm");
+		
+		Student student = new Student();
+		student.setName("Alfa");
+		student.setScore(100);
+		modelAndView.addObject("student", student);
+		
+		return modelAndView;
+		
+	}
 
 }
