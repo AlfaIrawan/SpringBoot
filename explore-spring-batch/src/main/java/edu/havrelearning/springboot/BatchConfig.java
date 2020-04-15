@@ -25,7 +25,7 @@ public class BatchConfig {
 	public Step Step() {
 		
 		return sbf.get("Step1")
-				.<String, String>chunk(1)
+				.<String, String>chunk(5)
 				.reader(reader())
 				.writer(writer())
 				.processor(processor())
