@@ -1,6 +1,6 @@
 package edu.havrelearning.springboot.config;
 
-
+import org.springframework.batch.item.ItemProcessor;
 import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.file.FlatFileItemReader;
 import org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper;
@@ -35,7 +35,17 @@ public class BatchConfig {
 		lineMapper.setLineTokenizer(lineTokenizer);
 		lineMapper.setFieldSetMapper(fieldSetMapper);
 		
-		return null;
+		return reader;
+		
+	}
+	
+	public ItemProcessor<Product, Product> processor() {
+		
+		
+		return (p)->{ 
+			p.setPrice(p.getPrice()-p.getPrice()*10/100); 
+			return p;
+		};
 		
 	}
 	
