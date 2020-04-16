@@ -77,6 +77,8 @@ public class BatchConfig {
 		lineMapper.setLineTokenizer(lineTokenizer);
 		lineMapper.setFieldSetMapper(fieldSetMapper);
 		
+		reader.setLineMapper(lineMapper);
+		
 		return reader;
 		
 	}
@@ -98,7 +100,7 @@ public class BatchConfig {
 		JdbcBatchItemWriter<Product> writer = new JdbcBatchItemWriter<>();
 		writer.setDataSource(dataSource());
 		writer.setItemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider<Product>());
-		writer.setSql("INSERT INTO PRODUCT(ID, NAME, DESCRIPTION, PRICE) VALUES(:id, :name, :description, :price)");
+		writer.setSql("INSERT INTO mydb.product(ID,NAME,DESCRIPTION,PRICE) VALUES(:id,:name,:description,:price)");
 		
 		return writer;
 		
@@ -108,8 +110,8 @@ public class BatchConfig {
 	public DataSource dataSource() {
 		
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
-		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-		dataSource.setUrl("jdbc:mysql://localhost:3306/mydb");
+		dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+		dataSource.setUrl("jdbc:mysql://localhost:3306/mydb?serverTimezone=UTC");
 		dataSource.setUsername("root");
 		dataSource.setPassword("p4ss*w0rd");
 		
